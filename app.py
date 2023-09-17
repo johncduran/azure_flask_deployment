@@ -18,9 +18,13 @@ def aboutpage():
 @app.route('/random')
 def randomnumber():
     number_var = random.randint(1,10000)
-    fake_address = fake.address
+    fake_address = fake.address()
     return render_template('random.html', single_number = number_var, single_address = fake_address)
 
+@app.route('/data')
+def datapage():
+    pd.read_csv('')
+    return render_template('data.html')
 
 if __name__ == '__main__':
     app.run(
