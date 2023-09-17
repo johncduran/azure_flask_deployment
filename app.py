@@ -23,8 +23,8 @@ def randomnumber():
 
 @app.route('/data')
 def datapage():
-    pd.read_csv('')
-    return render_template('data.html')
+    csv = pd.read_csv('https://raw.githubusercontent.com/johncduran/azure_flask_deployment/main/data_files_used/adult-depression-lghc-indicator-24.csv')
+    return render_template('data.html', first_csv = csv)
 
 if __name__ == '__main__':
     app.run(

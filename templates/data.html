@@ -5,11 +5,7 @@
     <section class="mb-6">
         <h2 class="text-xl mb-2">Data Table</h2>
         <p>Below is a table showing data on.</p>
-        <p>{{ single_number }}</p>
-
-        <h2 class="text-xl mb-2">Random Address</h2>
-        <p>Below is a random address.</p>
-        <p>{{ single_address }}</p>
+        <p>{{ first_csv.to_html(classes='table table-striped table-bordered table-condensed') | safe }}</p>
     </section>
 
     <section>
