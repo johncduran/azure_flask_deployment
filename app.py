@@ -18,7 +18,7 @@ def aboutpage():
 @app.route('/random')
 def randomnumber():
     number_var = random.randint(1,10000)
-    fake_address = Faker.address
+    fake_address = fake.address
     return render_template('random.html', single_number = number_var, single_address = fake_address)
 
 
